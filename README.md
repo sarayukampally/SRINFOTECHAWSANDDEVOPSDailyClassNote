@@ -8181,17 +8181,14 @@ USE CASE::
 
 
 
-14/08/2025::
-================
-
-
 Docker Swarm::
 ===================
 
 Docker and Docker Swarm are both tools used to manage containers, but they serve different purposes and have different features. 
 
 
-![image](https://github.com/user-attachments/assets/a7dc1fa3-6551-44cf-b954-7e411141b87e)
+![Uploading image.png…]()
+
 
 
 Docker::
