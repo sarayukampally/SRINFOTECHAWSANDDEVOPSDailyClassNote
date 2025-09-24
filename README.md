@@ -8281,7 +8281,8 @@ I have created 3 ubuntu machines::
 3. Worker Node2
 
 
-![Uploading image.png…]()
+<img width="660" height="466" alt="image" src="https://github.com/user-attachments/assets/aa4716be-4d6f-4d7d-9681-78d1067e1377" />
+
 
 
 NOTE:: please make sure docker should be installed on all 3 nodes
