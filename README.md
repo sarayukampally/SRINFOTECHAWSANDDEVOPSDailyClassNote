@@ -8284,6 +8284,8 @@ I have created 3 ubuntu machines::
 ![Uploading image.png…]()
 
 
+NOTE:: please make sure docker should be installed on all 3 nodes
+
 >docker swarm init runs on master
 
 >docker swarm join runs on node
