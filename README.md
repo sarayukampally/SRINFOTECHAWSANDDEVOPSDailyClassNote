@@ -8187,7 +8187,7 @@ Docker Swarm::
 Docker and Docker Swarm are both tools used to manage containers, but they serve different purposes and have different features. 
 
 
-![Uploading image.png…]()
+<img width="660" height="466" alt="image" src="https://github.com/user-attachments/assets/ee1a6944-5271-4d4c-9088-24f0e8b4a50e" />
 
 
 
@@ -8265,6 +8265,12 @@ Docker vs Docker Swarm::
 •	Docker Swarm is built into Docker, making it easier to set up and use compared to other container orchestration systems like Kubernetes.
 
 
+
+
+
+23/09/2025::
+================
+
 I have created 3 ubuntu machines::
 ================================
 
@@ -8274,3 +8280,70 @@ I have created 3 ubuntu machines::
 
 3. Worker Node2
 
+
+![Uploading image.png…]()
+
+
+>docker swarm init runs on master
+
+>docker swarm join runs on node
+
+> docker swarm join --token SWMTKN-1-33cj3h7mhtq98iy5aifyy9s1cdqnzh4jgl3rdgdez0vbfx8fnc-bu27q63wt2i7qfgkh0r07o85o 172.31.24.64:2377
+
+![image](https://github.com/user-attachments/assets/c3434137-924b-4ea7-9a3f-24f188d3d19a)
+
+![image](https://github.com/user-attachments/assets/015201ed-aea1-461f-90bc-08c1d78fae7b)
+
+![image](https://github.com/user-attachments/assets/06424e51-1f9b-46e3-89af-80062ccb2f26)
+
+>once initialize the swarm it will automatically created overlay network
+
+![image](https://github.com/user-attachments/assets/d19378c2-01c9-4698-ad1d-c8af6aff1a55)
+
+
+create our own overlay network ::
+==========================
+
+>docker service create --name srinfotechawsdevops --network srinfo-network --replicas=3 -p 80:80 nginx:latest
+
+>docker network create –d overlay sr-overlay
+
+![image](https://github.com/user-attachments/assets/84319ff3-e569-40c5-bdf6-69634bf65484)
+
+> docker network create -d overlay sr-overlay
+
+>docker node ls
+
+![image](https://github.com/user-attachments/assets/3fb48730-74d2-4e65-ac80-dce537b2438a)
+
+![image](https://github.com/user-attachments/assets/c545c853-157b-484f-8b7b-e3c81236d142)
+
+create service under the overlay network::
+========================
+
+> docker service create -d --name my-own-SRservice --replicas 3 -p 80:80 nginx:latest
+
+>docker service ls
+
+>docker node ls
+
+--docker always maintain --replicas 3 means 3 containers by default if for example 1 container die docker automatically create container automatically this is main use of services with docker
+
+docker swarm:: multi containarization for your applications
+
+Docker Swarm is a built-in container orchestration tool that allows you to manage a cluster of Docker hosts as a single entity
+
+
+Scale UP::
+==============
+
+>docker service scale srinfotechawsdevops=5
+
+>docker service ls
+
+Scale Down::
+=============
+
+>docker service scale srinfotechawsdevops=2
+
+>docker service ls
