@@ -8611,10 +8611,15 @@ Docker SWARM Overview::
 =============================
 
 1.this is Docker Inc's Container Orchestration Platform
+
 2.it only supports managing Docker containerized application workloads
+
 3.it is pretty easy to install and learn
+
 4.can be installed on a laptop with pretty basic configuation as well as it is very light weight
+
 5.good for POC or learning purpose
+
 6.not production grade
 
 
