@@ -8350,3 +8350,363 @@ Scale Down::
 >docker service scale srinfotechawsdevops=2
 
 >docker service ls
+
+
+
+
+24/09/2025::
+================
+
+
+Docker compose::
+=====================
+
+Docker Compose is a tool for defining and running multi-container Docker applications. With a docker-compose.yml file, you can configure your application’s services, networks, and volumes, and then start them all with a single command.
+Below, I'll explain how to create a docker-compose.yml file and walk you through an example that demonstrates its use.
+version: "3"  # Specify the version of Docker Compose
+
+services:
+  <service_name>:  # Define your services (containers)
+    image: <image_name>  # The Docker image to use (can be local or from Docker Hub)
+    build: <path_to_dockerfile>  # Path to the Dockerfile if you need to build the image
+    container_name: <container_name>  # Optionally define a container name
+    ports:  # Map container ports to host ports
+      - "<host_port>:<container_port>"
+    volumes:  # Mount volumes (directories or files)
+      - <host_directory>:<container_directory>
+    environment:  # Set environment variables
+      - <key>=<value>
+    depends_on:  # Define dependencies between services
+      - <another_service>
+    networks:  # Specify networks to connect to
+      - <network_name>
+
+networks:
+  <network_name>:  # Define custom networks
+    driver: bridge  # Optional: can be "bridge", "host", or "none"
+
+volumes:
+  <volume_name>:  # Define named volumes for persistent data
+
+Explanation of the docker-compose.yml Example:
+1.	Version: Specifies the version of the Docker Compose file format to use. In this case, 3.8.
+
+2.	Services:
+
+o	web: This is the service for your Node.js application.
+
+	image: Specifies the base image to use (node:18-alpine).
+
+	working_dir: Sets the working directory inside the container.
+
+	volumes: Mounts the current directory (.) to /app inside the container so your application code is accessible to the container.
+
+	ports: Maps port 3000 on the host to port 3000 inside the container.
+
+	environment: Sets environment variables like NODE_ENV and the database connection information (DB_HOST=db).
+
+	depends_on: Ensures the db service is started before the web service.
+
+o	db: This is the service for your MySQL database.
+
+	image: Specifies the MySQL version to use (mysql:8.0).
+
+	environment: Sets environment variables such as the MySQL root password, database name, and user credentials.
+
+	volumes: Mounts a named volume (db-data) to persist MySQL data between container restarts.
+
+	ports: Exposes port 3306 for MySQL to allow communication between containers or with the host.
+
+3.	Volumes: Defines a named volume (db-data) to persist the database data outside of the container.
+
+
+docker-compose.yml::
+=====================
+
+version: '3.8'
+
+services:
+  web:
+    image: node:18-alpine  # Use the official Node.js image
+    container_name: node-app
+    working_dir: /app
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    ports:
+      - "3000:3000"  # Expose port 3000 on the host and map it to port 3000 in the container
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=db  # Reference the db service as the hostname
+    depends_on:
+      - db  # Ensure the db service starts first
+
+  db:
+    image: mysql:8.0  # Use the official MySQL image
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - db-data:/var/lib/mysql  # Mount a volume for persistent data
+    ports:
+      - "3306:3306"  # Expose port 3306 for MySQL
+
+volumes:
+  db-data:  # Define a volume for MySQL data persistence
+
+> docker compose up -d
+
+>docker exec -it bbeebd8d5ca2 /bin/bash
+
+> mysql -u root -p
+
+> SHOW DATABASES;
+
+CREATE DATABASE SRINFOTECH;
+USE SRINFOTECH;
+
+CREATE TABLE SRINFOTECHTABLE ( id INT NOT NULL, name VARCHAR(250) NOT NULL, cource VARCHAR(100) NOT NULL, city VARCHAR(200) NOT NULL, PRIMARY KEY(id) );
+
+INSERT INTO SRINFOTECHTABLE VALUES ( 1, "veeresh", "AWSDEVOPS","Hyderabad" );
+
+INSERT INTO SRINFOTECHTABLE VALUES ( 2, "laxmikanth", "AWSDEVOPSTraining","Bangalour" );
+
+INSERT INTO SRINFOTECHTABLE VALUES ( 1, "Rawali", "AWSDEVOPSFullStack","Chennai" );
+
+SELECT * FROM SRINFOTECHTABLE;
+
+
+Use Cases for Docker Compose:
+•	Multi-container applications: Perfect for web applications that rely on more than one service (e.g., database, caching, backend).
+•	Development environments: Provides a consistent environment that can be easily replicated across different machines.
+•	Testing and CI/CD: Can be used to quickly spin up environments for testing or continuous integration/deployment pipelines
+
+
+
+Docker Compose Quickstart::
+============================
+
+please try to practice below example for docker compose 
+
+https://docs.docker.com/compose/gettingstarted/
+
+
+![image](https://github.com/user-attachments/assets/8683a557-4a34-42a1-93ee-ca1cbf78fdfa)
+
+
+Example2 Dockerfile::
+===================
+
+https://github.com/srinfotech7358/spring-ms.git
+
+Please clone this project in ubuntu machines
+
+root@ip-172-31-20-86:~# git clone https://github.com/srinfotech7358/spring-ms.git
+
+![image](https://github.com/user-attachments/assets/188db6f2-c5b5-419d-8824-0b9b9c6728ee)
+
+root@ip-172-31-20-86:~# cd spring-ms/
+root@ip-172-31-20-86:~/spring-ms# ls
+Dockerfile  azure-pipeline.yml  azure-pipelines.yml  deploy.yaml  pom.xml  src
+root@ip-172-31-20-86:~/spring-ms#
+
+Build Image::
+============
+root@ip-172-31-20-86:~/spring-ms# docker image build -t springmyapp .
+[+] Building 0.4s (12/12) FINISHED                                                                                      docker:default
+ => [internal] load build definition from Dockerfile                                                                              0.0s
+ => => transferring dockerfile: 256B                                                                                              0.0s
+ => WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 1)                                                    0.0s
+ => [internal] load metadata for registry.access.redhat.com/ubi8/openjdk-11:latest                                                0.3s
+ => [internal] load metadata for docker.io/library/maven:3.6.3-jdk-11                                                             0.1s
+ => [auth] library/maven:pull token for registry-1.docker.io                                                                      0.0s
+ => [internal] load .dockerignore                                                                                                 0.0s
+ => => transferring context: 2B                                                                                                   0.0s
+ => [internal] load build context                                                                                                 0.0s
+ => => transferring context: 2.76kB                                                                                               0.0s
+ => [stage-1 1/2] FROM registry.access.redhat.com/ubi8/openjdk-11:latest@sha256:28b35eea470174a39befd8eb9250a3276b79a4f6e7dac787  0.0s
+ => [stage1 1/3] FROM docker.io/library/maven:3.6.3-jdk-11@sha256:1d29ccf46ef2a5e64f7de3d79a63f9bcffb4dc56be0ae3daed5ca5542b38aa  0.0s
+ => CACHED [stage1 2/3] COPY . .                                                                                                  0.0s
+ => CACHED [stage1 3/3] RUN mvn clean package                                                                                     0.0s
+ => CACHED [stage-1 2/2] COPY --from=stage1 target/*.jar app.jar                                                                  0.0s
+ => exporting to image                                                                                                            0.0s
+ => => exporting layers                                                                                                           0.0s
+ => => writing image sha256:bdbbb4bbe700af425032e6a27d6909e2906677fbffce9b833d596e3f37082479                                      0.0s
+ => => naming to docker.io/library/springmyapp                                                                                    0.0s
+
+ 1 warning found (use docker --debug to expand):
+ - FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 1)
+root@ip-172-31-20-86:~/spring-ms#
+
+![image](https://github.com/user-attachments/assets/44c6ba1e-7322-436d-af30-4606cb484283)
+
+create container::
+===============
+
+root@ip-172-31-20-86:~/spring-ms# docker images
+REPOSITORY                  TAG       IMAGE ID       CREATED        SIZE
+spring                      latest    bdbbb4bbe700   9 hours ago    410MB
+springmyapp                 latest    bdbbb4bbe700   9 hours ago    410MB
+srinu7358/spring-03042025   latest    bdbbb4bbe700   9 hours ago    410MB
+allinstructions             latest    c2993e54968d   9 hours ago    1.17GB
+<none>                      <none>    805cbec82269   9 hours ago    1.17GB
+testmyownimage              latest    621f509fde33   10 hours ago   1.1GB
+ifocus                      latest    381bfb89fb02   10 hours ago   1.1GB
+srinu7358/ifocus-myapp      latest    381bfb89fb02   10 hours ago   1.1GB
+root@ip-172-31-20-86:~/spring-ms# docker run -d -p 8081:8081 springmyapp:latest
+17ac78f05de4abdca3d46972e63f29c897a011d732ca3e76e7c1ef2158af10b1
+root@ip-172-31-20-86:~/spring-ms#
+
+![image](https://github.com/user-attachments/assets/d0132046-021c-46b7-9259-75382dc155fb)
+
+![image](https://github.com/user-attachments/assets/b9064110-355c-4619-adf5-fb9fac875b6f)
+
+
+>docker container run –d –p 8080:8080 springmyapp:1.0
+-d --> detached mode
+-p  -->mappimg a port
+8080: host port
+8080: container port
+springmyapp:: image name
+1.0:: tag name
+
+Expected 
+http://54.162.108.91:8080/
+
+
+![image](https://github.com/user-attachments/assets/3f90a7ca-b7a7-4d5d-ac7a-0d8a24346518)
+
+
+Usefull commands::
+====================
+
+>docker compose up
+
+sudo apt-get install docker-compose-plugin
+
+>docker image tag srinfotechmyapp srinfotech7358/myapp:latest
+
+>docker.io/library/hello-world:latest
+
+docker.io--->registry name
+library  -->username-->docker hub username--
+
+Image formate is
+
+registry name/repositoryusername/imagename:tagname
+
+docker -io/srinfotech7358/myapp:latest
+
+
+
+
+
+25/09/2025::
+==============
+
+
+Docker SWARM Overview::
+=============================
+
+1.this is Docker Inc's Container Orchestration Platform
+2.it only supports managing Docker containerized application workloads
+3.it is pretty easy to install and learn
+4.can be installed on a laptop with pretty basic configuation as well as it is very light weight
+5.good for POC or learning purpose
+6.not production grade
+
+
+Kubernetes Overview::
+========================
+
+
+Kubernetes (often abbreviated as K8s) is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications. Originally developed by Google.
+
+
+![image](https://github.com/user-attachments/assets/6f78888e-d2cd-469b-9f17-14d79c7458ce)
+
+
+free and opensource container orchestration platform developed by Google along with many open source contributors
+
+it is production grade
+
+free for personal and commercial use
+
+as it is opensource, we won't get support from Google
+
+only supports command line interface (CLI)
+
+doesn't support web console
+
+Kubernetes does provide some basic Dashboard but it is considered a security vulnerability, hence no one uses the Kubernetes Dashboard
+
+Rancher is opensource webconsole for Google Kubernetes
+
+supports inbuilt monitoring features
+
+it can check the health of our application, when it finds your application is not responding, it can repair it or replace it with another good healthy instance of your application
+it supports inbuilt load-balancing
+Master ---Management --(Orchestration) Node machine (minion) --workers (containers)
+
+POD ---the smallest unit, mainatained one or more containers
+
+YAML --key-value paires
+
+1.Container Orchestration: Kubernetes helps you manage multiple containers, ensuring that they run efficiently and reliably across many servers.
+
+2.Scaling: Kubernetes can automatically scale your applications up or down based on demand, making it easier to handle varying workloads.
+
+3.Load Balancing: It can distribute network traffic to different containers, ensuring that applications remain responsive even under heavy loads.
+
+4.Self-Healing: If a container crashes or stops working, Kubernetes can automatically restart or replace it, ensuring the application stays available.
+
+5.Automated Deployment and Rollback: Kubernetes can automate the process of deploying new versions of an application, and if something goes wrong, it can roll back to a previous version.
+
+6.Storage Management: Kubernetes can automatically mount the storage resources you need for your applications, making it easier to manage persistent data.
+
+In short, Kubernetes is designed to make it easier to manage applications at scale in a way that is highly automated, reliable, and efficient. It’s widely used in DevOps platform
+
+Cluster:: collection of nodes with a single responsibility
+
+All the nodes in that cluster do same process, same type of work can will do collection of nodes in cluster
+
+Cluster::
+a cluster might refer to a set of virtual machines or containers working together for a specific application or service.
+
+
+Kubernetes Cluster Components:
+==================================
+
+1.Master Node (Control Plane): The Master Node is the brain of the Kubernetes cluster. It manages the cluster and makes decisions about scheduling, scaling, and maintaining the health of the application. The control plane consists of several key components:
+
+1.API Server::
+The API server exposes the Kubernetes API, which is used to interact with the cluster.
+
+2.Scheduler::
+The scheduler assigns work (pods) to available worker nodes.
+
+3.Controller Manager: :
+Ensures that the desired state of the system is maintained, such as ensuring that the correct number of pods are running.
+
+4.etcd:
+A distributed key-value store used to store all cluster data, including the state of the system (like deployed pods, config maps, and secrets).
+
+Worker Nodes (Minions):
+=========================
+
+o The Worker Nodes are responsible for running the actual application workloads. These nodes host the pods, which are the smallest deployable units in Kubernetes. A worker node typically runs:
+
+1.Kubelet: An agent that ensures the containers in the pods are running and healthy.
+
+2.Kube Proxy: A network proxy that maintains network rules for pod communication.
+
+3.Container Runtime: The software responsible for running containers (e.g., Docker, containerd).
+
+4.Pods::
+
+A pod is the smallest unit of execution in Kubernetes and can contain one or more containers that share resources such as networking and storage. Pods are always deployed in a Kubernetes cluster and are managed by the control plane.
+
+
+
