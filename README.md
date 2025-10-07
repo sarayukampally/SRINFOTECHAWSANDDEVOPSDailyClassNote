@@ -8630,7 +8630,9 @@ Kubernetes Overview::
 Kubernetes (often abbreviated as K8s) is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications. Originally developed by Google.
 
 
-![image](https://github.com/user-attachments/assets/6f78888e-d2cd-469b-9f17-14d79c7458ce)
+
+<img width="1817" height="710" alt="image" src="https://github.com/user-attachments/assets/a54d509b-c1d2-4644-9a8c-2a992ff90b0d" />
+
 
 
 free and opensource container orchestration platform developed by Google along with many open source contributors
