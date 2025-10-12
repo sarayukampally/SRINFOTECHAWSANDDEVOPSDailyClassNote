@@ -9571,3 +9571,146 @@ http://54.236.173.79:32699/stocks
 
 
 
+
+10/10/2025::
+===============
+
+OpenShift Orchestration::
+=========================
+
+OpenShift is an open-source container application platform built around Docker containers and Kubernetes. It's designed to help developers and IT organizations to develop, deploy, and manage applications in a highly automated environment. OpenShift offers a range of tools to make the development process more streamlined, such as CI/CD (Continuous Integration/Continuous Delivery) pipelines, a user-friendly web console, monitoring, and logging features.
+Here are some key features and components of OpenShift:
+1.	Kubernetes-based orchestration: OpenShift is built on top of Kubernetes, providing advanced container orchestration, scaling, and management.
+2.	Developer Tools: OpenShift offers tools that make it easier for developers to deploy applications, like a simple web-based interface, CLI (Command Line Interface), and built-in support for various programming languages.
+3.	Integrated CI/CD Pipelines: OpenShift integrates with Jenkins and other tools to automate the process of building, testing, and deploying applications.
+4.	Security: OpenShift has several security features, including integrated authentication, network policies, and role-based access control (RBAC).
+5.	Multi-cloud & Hybrid Cloud: It supports hybrid cloud environments, so applications can run across multiple infrastructures—on-premises, in the cloud, or a combination.
+6.	Automated Scaling: OpenShift can automatically scale applications up or down based on resource usage.
+7.	Registry and Image Management: It includes a built-in container registry to manage Docker images and store them for your applications
+
+Red Hat Openshift Overview::
+============================
+
+- Red Hat Openshift is developed on top of Opeensource OKD ( which in turn is developed on top of opensource Kubernetes )
+- supports command line interface and webconsole(GUI)
+- supports Role based access control (RBAC), hence multiple users can be created with different level of access to Openshift cluster
+- supports many additional features on top of all the Kubernetes features
+  1. User Management
+  2. Pre-integrated monitoring tools ( Prometheus & Grafana Dashboards )
+  3. Out of the box - Private Container Registry
+  4. Routes - a new feature only available in Openshift which is developed on top of Kubernetes Ingress
+  5. Using the Kubernetes operators, the Red Hat Openshift team has many additional features on top of Kubernetes
+- Openshift version upto 3 - supported many different container runtime/engines including Docker
+- Openshift version 4 and above - only supports Podman Container Engine and CRI-O Container Runtime
+- Due to security vulnerabilities issues in Docker, 
+
+Using Free RedHat Developer Sandox on cloud - Openshift::
+======================================================
+
+https://console.redhat.com/openshift/sandbox
+
+we need to register free Red Hat account for  OpenShift
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/144ec3c0-1e9a-44ab-8c0e-af47e46016a3" />
+
+
+Click Register
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9373f03f-e395-4c12-8be6-dbc6368a866a" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/63d71c15-505b-4edd-b9a6-a491910780c3" />
+
+
+Enter Redhat Login Name
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/41c87ef3-b91b-420c-9a0c-91fa5683efbe" />
+
+
+Enter the Password
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b4a2447c-e00d-46a0-ab26-e989014f8709" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d8d563f0-e23a-49ac-a5a3-ea3f6cc5d779" />
+
+
+click create account
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8ccdce9e-321e-41b8-a17e-bcf0e5455f27" />
+
+
+you will get the Email verification, please check the email
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/817d9dac-8b58-4e4e-b4d8-317b70c5534e" />
+
+
+click the link which is you got
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ad036d2f-fa51-449d-b598-b14ae60032ba" />
+
+
+Red Hat Developer Sandbox
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/210b0476-9e77-456e-81e2-784ae69a98bf" />
+
+
+Select Openshift Launch
+
+![image](https://github.com/user-attachments/assets/19773259-41b0-47ae-8f76-e2386d520d1b)
+
+
+click DevSandBox
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fbaafa97-8ea0-4790-b491-0226807643ce" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ebfff6b0-426a-4e74-bb1c-3663eaf39750" />
+
+
+select Role is Developer
+
+![image](https://github.com/user-attachments/assets/5d6e2c8f-c1d5-4ee1-a399-74ef2e03fd00)
+
+click all selected permissions
+
+![image](https://github.com/user-attachments/assets/17d83152-51fe-49b8-8a31-ba66884efaf1)
+
+![image](https://github.com/user-attachments/assets/f4e855fd-a34a-4668-941b-fb4baf3c28bb)
+
+![image](https://github.com/user-attachments/assets/2ce3c97d-de12-4e69-b2b4-6e51100d421a)
+
+Get started
+
+![image](https://github.com/user-attachments/assets/ac637db7-c2cc-4b8f-8841-809131f72732)
+
+Openshift is ready and go to Developer -->Helm---->Helm charts---->search Jenkins ---Installed Jenkins Helm Charts
+
+
+![image](https://github.com/user-attachments/assets/b91564a1-27d1-473c-b8b3-ce67403694fc)
+
+enter login username
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e8ad7d6c-c3a0-4aea-9b35-07b3685e6685" />
+
+click Next asking password
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/58c41545-a258-4978-8f85-b944416fed63" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6d9060c3-5666-4475-961a-edef071ae01f" />
+
+
+click Openshift
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ddadad8c-d305-4367-877f-856b7e3130e1" />
+
+
+it will be navigate to openshift home page like below
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c83f4c2e-7623-45a0-a4f9-e09c67813737" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d30f1507-a277-4847-86ed-21c2eca9d035" />
+
