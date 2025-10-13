@@ -9714,3 +9714,393 @@ it will be navigate to openshift home page like below
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d30f1507-a277-4847-86ed-21c2eca9d035" />
 
+
+
+
+
+
+13/10/2025::
+==============
+
+Login command line::
+
+OC ----> Openshift Client
+
+click Copy login command at top right corner
+
+![image](https://github.com/user-attachments/assets/4e1735af-4114-4d8d-8c01-526127c36ceb)
+
+![image](https://github.com/user-attachments/assets/6f4cfb80-19ca-4a3b-b4be-405c6e69f812)
+
+copy Login in with this Token
+
+![image](https://github.com/user-attachments/assets/11a7edbb-f3aa-4e79-8457-90dedfb0af06)
+
+![image](https://github.com/user-attachments/assets/3d18ae45-f2d6-43ca-b8e5-95d5b2d23a64)
+
+Getting oc command is not found
+
+So we need to download the oc from google
+
+1 download oc.exe https://developers.redhat.com/openshift/command-line-tools
+2 navigate to environment variables -> system variables -> new
+3 add here: /path/to/the/oc.exe
+
+https://docs.redhat.com/en/documentation/openshift_container_platform/4.8/html/cli_tools/openshift-cli-oc#cli-installing-cli_cli-developer-commands
+
+https://access.redhat.com/downloads/content/290/ver=4.18/rhel---9/4.18.7/x86_64/product-software
+
+OC download LInk::
+=====================
+
+OC
+is a client tool used to create and manage Openshift resources in OpenShift
+it makes REST call to API Server
+
+https://access.redhat.com/downloads/content/290/ver=4.18/rhel---9/4.18.8/x86_64/product-software
+
+Download Windows client
+
+![image](https://github.com/user-attachments/assets/14d36459-8cf3-4ba1-8cb5-361f34730aa0)
+
+Download the oc for window and extracted all the files
+
+![image](https://github.com/user-attachments/assets/85d30663-3fc1-4a7a-878a-3f316b74ce7c)
+
+Open from command line
+
+![image](https://github.com/user-attachments/assets/999801e8-1078-474c-9ab1-27e4bb3e8a21)
+
+
+![image](https://github.com/user-attachments/assets/3122d471-9a89-467c-b986-d9229f95db9f)
+
+Switch project
+>oc project <projectname>
+>oc project srinu942-dev
+
+![image](https://github.com/user-attachments/assets/31f81eac-41a4-403b-8de3-3edf5089e4f0)
+
+OpenShift resources
+•	Deployment (K8s resource)
+•	ReplicaSet (K8s resource)
+•	Pod (K8s resource)
+•	Job (K8s resource)
+•	DaemonSet (K8s resource)
+•	StatefulSet (K8s resource)
+•	Build ( OpenShift resource - Custom Resource added by OpenShift )
+•	ImageStream ( OpenShift resource - Custom Resource added by OpenShift )
+•	DeploymentConfig ( OpenShift resource - Custom Resource added by OpenShift )
+
+Deployment command looks like this
+>oc create deployment nginx --image=bitnami/nginx:latest --replicas=3
+
+![image](https://github.com/user-attachments/assets/dbc5a3bd-aa15-4346-b753-9621d8dd3e81)
+
+Deployment::
+=================
+This is a JSON/YAML definition which is stored in etcd database
+The deployment is managed by Deployment Controller
+when we applications, they are deployed as Deployment with Kubernetes/OpenShift
+Deployment Controller creates ReplicaSet, which is then managed by ReplicaSet Controller
+Deployment has one or more ReplicaSet(s)
+
+ReplicaSet::
+=============
+This is a JSON/YAML definition which is stored in etcd database
+The ReplicaSet is managed by ReplicaSet Controller
+ReplicaSet capture details like
+How many Pod instances are desired?
+ReplicaSet Controller reads the ReplicaSet definition and learns the desired Pod instance count
+ReplicaSet Controller creates so many Pod definition as indicated in the ReplicaSet
+ReplicaSet Controller ensures the desired Pod count matches with the actual Pod count, whenever a Pod crashes, it is the responsibility of ReplicaSet Controller to ensure the desired and actual Pods are equal
+ReplicaSet has one or more Pods
+
+Pod::
+====
+is a collection of one or more Containers
+IP address is assigned on the Pod level not on the Container level
+If two containers are in the same Pod, there will be sharing IP Address of the Pod
+within container, application are deployment ( tomcat,mysql, nginx these are applications )
+recommended best practice,only one application should be there in a Pod
+Pods are scheduled by Scheduler onto some Node
+every Pod has a Network Stack and Network Interface Card (NIC)
+
+Kubelet::
+===========
+is a daemon service that interacts with the Container Runtime on the current node/server where kubelet is running
+kubelet downloads the required container image and creates the Pod containers
+kubelet frequently reports the status of Pod container status to the API server
+kubelet also monitors the health of POds running on the node and ensures they are healthy
+kubelet will there on every node ( master and worker nodes )
+
+kube-proxy::
+=============
+is a Pod that runs one instance per node (both master and worker nodes)
+provides load-balancing a group of similar Pods
+Sample Demo Project fro Openshift
+
+Kubectl::
+========
+is a client tool used to create and manage deployments and services in Kubernetes
+it also works in OpenShift
+it make REST call to API Server
+
+OC::
+===
+is a client tool used to create and manage Openshift resources in OpenShift
+it makes REST call to API Server
+
+https://github.com/wicksy/openshift-demo-app/tree/master
+https://github.com/wicksy/openshift-demo-app
+
+Login command line::
+
+OC ----> Openshift Client
+
+click Copy login command at top right corner
+
+![image](https://github.com/user-attachments/assets/4e1735af-4114-4d8d-8c01-526127c36ceb)
+
+![image](https://github.com/user-attachments/assets/6f4cfb80-19ca-4a3b-b4be-405c6e69f812)
+
+copy Login in with this Token
+
+![image](https://github.com/user-attachments/assets/11a7edbb-f3aa-4e79-8457-90dedfb0af06)
+
+![image](https://github.com/user-attachments/assets/3d18ae45-f2d6-43ca-b8e5-95d5b2d23a64)
+
+Getting oc command is not found
+
+So we need to download the oc from google
+
+1 download oc.exe https://developers.redhat.com/openshift/command-line-tools
+2 navigate to environment variables -> system variables -> new
+3 add here: /path/to/the/oc.exe
+
+https://docs.redhat.com/en/documentation/openshift_container_platform/4.8/html/cli_tools/openshift-cli-oc#cli-installing-cli_cli-developer-commands
+
+https://access.redhat.com/downloads/content/290/ver=4.18/rhel---9/4.18.7/x86_64/product-software
+
+OC download LInk::
+=====================
+
+OC
+is a client tool used to create and manage Openshift resources in OpenShift
+it makes REST call to API Server
+
+https://access.redhat.com/downloads/content/290/ver=4.18/rhel---9/4.18.8/x86_64/product-software
+
+Download Windows client
+
+![image](https://github.com/user-attachments/assets/14d36459-8cf3-4ba1-8cb5-361f34730aa0)
+
+Download the oc for window and extracted all the files
+
+![image](https://github.com/user-attachments/assets/85d30663-3fc1-4a7a-878a-3f316b74ce7c)
+
+
+OC (Openshift Client) Environment Path Setup::
+=================================================
+
+Go to Environment Variable
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/49b284e4-d6f4-4174-882b-eba40f7278a7" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/785ec522-2004-4b35-a508-ae66bb170e3a" />
+
+Set the User Variables::
+===========================
+
+C:\Openshift\oc\
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5c9a09a-bd7a-445e-ac0a-5ae719ee5b7b" />
+
+Set the System Variables and Path::
+===================================
+
+C:\Openshift\oc\
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fb77f2ad-5bd6-4e30-9e1f-88c40f65d4a5" />
+
+click OK ----> OK----> OK
+
+Go to command prompt
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/49ebb7c8-f469-4046-9c44-2030129aa615" />
+
+verify the OC
+
+>oc
+
+
+verify the oc verison
+
+>oc version
+
+
+C:\Users\HP>oc version
+
+Client Version: 4.19.3
+
+Kustomize Version: v5.5.0
+
+Server Version: 4.18.16
+
+Kubernetes Version: v1.31.8
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/48fd2ee7-1510-416d-8124-ec3ac161fec5" />
+
+
+Clone the Project from Openshift Command line(cli)::
+========================================================
+
+>git clone https://github.com/srinfotech7358/docker-Java-kubernetes-project.git
+
+
+C:\Users\HP>git clone https://github.com/srinfotech7358/docker-Java-kubernetes-project.git
+
+Cloning into 'docker-Java-kubernetes-project'...
+
+remote: Enumerating objects: 173, done.
+
+remote: Counting objects: 100% (58/58), done.
+
+remote: Compressing objects: 100% (47/47), done.
+
+Rremote: Total 173 (delta 33), reused 10 (delta 10), pack-reused 115 (from 1)
+
+Receiving objects: 100% (173/173), 31.47 KiB | 4.00 KiB/s, done.
+
+Resolving deltas: 100% (41/41), done.
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2eb89ce1-14e2-4cff-92de-2aa757f9a2cd" />
+
+>cd docker-Java-kubernetes-project
+
+>cd kubernetes
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fb1c3b1f-4da1-4cff-9f5a-4f72e0aae4ce" />
+
+>oc projects
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/250aba7f-14e3-46b7-8f1c-032da5197b11" />
+
+switch the project
+
+>oc project <projectname OR Namespace>
+
+>oc project srinfotech7358-dev
+
+C:\Users\HP\docker-Java-kubernetes-project\kubernetes>oc project srinfotech7358-dev
+
+Already on project "srinfotech7358-dev" on server "https://api.rm1.0a51.p1.openshiftapps.com:6443".
+
+C:\Users\HP\docker-Java-kubernetes-project\kubernetes>
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/198007de-0f67-4ba8-9d33-33ae5386f1d7" />
+
+
+create the openshift deployment::
+====================================
+
+Syntax::
+========
+
+>kubectl apply -f <playbook/yaml/yml>
+
+>oc apply -f shopfront-service.yaml
+
+>oc apply -f productcatalogue-service.yaml
+
+>oc apply -f stockmanager-service.yaml
+
+all 3 Micro services Deployemnts is created
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6ec769fc-fed2-4601-92fd-7ac0a0ad7f13" />
+
+
+expose Openshift Services::
+============================
+
+Syntax::
+===============
+
+>oc expose service <servicename>
+
+>oc expose deployment <deploymentName>
+
+>oc get svc OR services
+
+C:\Users\HP\docker-Java-kubernetes-project\kubernetes>oc get svc
+NAME                          TYPE           CLUSTER-IP       EXTERNAL-IP                                                  PORT(S)                                              AGE
+example                       ClusterIP      172.30.120.21    <none>                                                       80/TCP                                               7d6h
+jenkins                       ClusterIP      172.30.2.244     <none>                                                       80/TCP                                               7d7h
+jenkins-jnlp                  ClusterIP      172.30.35.46     <none>                                                       50000/TCP                                            7d7h
+modelmesh-serving             ClusterIP      None             <none>                                                       8033/TCP,8008/TCP,8443/TCP,2112/TCP                  7d7h
+my-app-service                ClusterIP      172.30.167.153   <none>                                                       8080/TCP                                             9h
+nginx                         ClusterIP      172.30.43.7      <none>                                                       8080/TCP                                             7h30m
+petclinic-00001               ClusterIP      172.30.121.230   <none>                                                       80/TCP,443/TCP                                       7h41m
+petclinic-00001-private       ClusterIP      172.30.127.53    <none>                                                       80/TCP,443/TCP,9090/TCP,9091/TCP,8022/TCP,8012/TCP   7h41m
+productcatalogue              NodePort       172.30.36.130    <none>                                                       8020:30170/TCP                                       8h
+shopfront                     NodePort       172.30.246.166   <none>                                                       8010:31109/TCP                                       8h
+sonarqube                     ClusterIP      172.30.197.221   <none>                                                       9000/TCP                                             7h13m
+spring-ms-git                 ExternalName   <none>           kourier-internal.knative-serving-ingress.svc.cluster.local   80/TCP                                               7d6h
+spring-ms-git-00001           ClusterIP      172.30.134.127   <none>                                                       80/TCP,443/TCP                                       7d6h
+spring-ms-git-00001-private   ClusterIP      172.30.131.234   <none>                                                       80/TCP,443/TCP,9090/TCP,9091/TCP,8022/TCP,8012/TCP   7d6h
+stockmanager                  NodePort       172.30.158.37    <none>                                                       8030:31782/TCP                                       7h53m
+
+
+>oc expose service shopfront
+
+>oc expose service productcatalogue
+
+>oc expose service stockmanager
+
+all 3 micro services are up & running in Openshift cluster
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/494b1042-e10b-424a-a50b-0b632e021a9e" />
+
+
+Shopfront::
+=============
+
+http://shopfront-srinfotech7358-dev.apps.rm1.0a51.p1.openshiftapps.com/
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b73a85c7-d73e-4f25-bd98-364afab07df5" />
+
+
+productcatalogue::
+====================
+
+http://shopfront-srinfotech7358-dev.apps.rm1.0a51.p1.openshiftapps.com/products
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a105b423-c20b-4823-8ae4-eb8ca69944a5" />
+
+
+stockmanager::
+===================
+
+http://stockmanager-srinfotech7358-dev.apps.rm1.0a51.p1.openshiftapps.com/stocks
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/393c4678-fd19-49ed-8def-bc08b7190529" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5f4eed44-9f10-4549-84bb-6506d65911fa" />
+
+
+Deploy Nginx Application To Openshift Platform::CLI
+=====================================================
+
+>oc create deployment nginx --image=bitnami/nginx:latest
+
+>oc expose deployment nginx --port=8080 --target-port=8080 --name=nginx
+
+
+http://route-unfortunate-smelt-srinfotech7358-dev.apps.rm1.0a51.p1.openshiftapps.com/
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7b164789-3b24-4212-8d53-989011144a96" />
