@@ -9950,7 +9950,8 @@ Server Version: 4.18.16
 Kubernetes Version: v1.31.8
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/48fd2ee7-1510-416d-8124-ec3ac161fec5" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a0489653-1ebf-4a47-bc3b-6422cff65730" />
+
 
 
 Clone the Project from Openshift Command line(cli)::
@@ -10062,34 +10063,35 @@ stockmanager                  NodePort       172.30.158.37    <none>            
 
 all 3 micro services are up & running in Openshift cluster
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/494b1042-e10b-424a-a50b-0b632e021a9e" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0d36e42f-abc3-4abd-a05d-267e1fdaa040" />
+
 
 
 Shopfront::
 =============
 
-http://shopfront-srinfotech7358-dev.apps.rm1.0a51.p1.openshiftapps.com/
+http://shopfront-srinfotechbatch3-dev.apps.rm1.0a51.p1.openshiftapps.com/
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b73a85c7-d73e-4f25-bd98-364afab07df5" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4563fcdd-e027-40bb-b047-4452f99b8034" />
+
 
 
 productcatalogue::
 ====================
 
-http://shopfront-srinfotech7358-dev.apps.rm1.0a51.p1.openshiftapps.com/products
+http://productcatalogue-srinfotechbatch3-dev.apps.rm1.0a51.p1.openshiftapps.com/products
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a105b423-c20b-4823-8ae4-eb8ca69944a5" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2f2955d7-08e6-4465-b7a3-587cf2fc39a1" />
 
 
 stockmanager::
 ===================
 
-http://stockmanager-srinfotech7358-dev.apps.rm1.0a51.p1.openshiftapps.com/stocks
+http://stockmanager-srinfotechbatch3-dev.apps.rm1.0a51.p1.openshiftapps.com/stocks
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/393c4678-fd19-49ed-8def-bc08b7190529" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/68e19c55-a305-4a1a-af7a-1d229224cce8" />
 
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5f4eed44-9f10-4549-84bb-6506d65911fa" />
 
 
 Deploy Nginx Application To Openshift Platform::CLI
@@ -10100,7 +10102,28 @@ Deploy Nginx Application To Openshift Platform::CLI
 >oc expose deployment nginx --port=8080 --target-port=8080 --name=nginx
 
 
-http://route-unfortunate-smelt-srinfotech7358-dev.apps.rm1.0a51.p1.openshiftapps.com/
+https://openshift-demo-app-git-srinfotechbatch3-dev.apps.rm1.0a51.p1.openshiftapps.com/
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7b164789-3b24-4212-8d53-989011144a96" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e0556bcf-6eae-4928-87e2-15ce7ad9beae" />
+
+
+Spring-ms::
+==============
+
+https://github.com/srinfotechbatch3/spring-ms
+
+https://spring-ms-git-srinfotechbatch3-dev.apps.rm1.0a51.p1.openshiftapps.com/
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1717c715-b54a-468b-b5cb-1562cff820a1" />
+
+
+
+Openshift-Demo Project::
+=============================
+
+https://github.com/srinfotechbatch3/openshift-demo-app
+
+https://openshift-demo-app-git-srinfotechbatch3-dev.apps.rm1.0a51.p1.openshiftapps.com/
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/27bc8190-5a7d-441f-ac4c-ec7294501d30" />
