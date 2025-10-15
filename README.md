@@ -10178,27 +10178,33 @@ Click Create your account
 
 Verify the email
 
-![image](https://github.com/user-attachments/assets/65095d9c-4f93-4d44-9f0c-50d11c752093)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/4973a2c2-8ee3-4ca4-a1d4-dbd2354d8c80" />
 
-![image](https://github.com/user-attachments/assets/9479e5ef-2f2f-481a-9ff2-796971238eb7)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/7eca638c-b19b-442a-8f85-59e7cd212f59" />
+
 
 Copy Wget URL
 
 wget -O splunk-9.4.1-e3bdab203ac8-linux-amd64.deb https://download.splunk.com/products/splunk/releases/9.4.1/linux/splunk-9.4.1-e3bdab203ac8-linux-amd64.deb
 
-![image](https://github.com/user-attachments/assets/91dcd374-23b5-4951-ba91-2031f3df5e7a)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/4c1d2f39-882b-4ccc-9f8a-15baee52ce42" />
+
 
 Create one AWS Ubuntu Machine and past the Wget url and enter
 
-![image](https://github.com/user-attachments/assets/da0d2f58-6893-41a3-87dc-9cfde5abdb54)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/c3f95fbb-92c7-4247-8b49-0231262f7f61" />
+
 
 ![image](https://github.com/user-attachments/assets/6ca6e5cc-e93e-4fc2-ad07-321d2b546b6d)
 
 Download successfully using that wget url
 
-![image](https://github.com/user-attachments/assets/9ab0f410-654b-41bf-aeaf-0ddd9cb8f9bf)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/246ef2d7-09c3-4231-ae0e-14fdae96963d" />
+
 
 Go to splunk tutorial
+
 https://docs.splunk.com/Documentation/Splunk/9.4.1/SearchTutorial/WelcometotheSearchTutorial
 
 go to below link
@@ -10206,75 +10212,103 @@ go to below link
 https://docs.splunk.com/Documentation
 
 click Splunk enterprise
-![image](https://github.com/user-attachments/assets/e29a16ac-e8c0-4001-b9e7-0a38083a143c)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/7bf19281-76ae-4b34-9c26-68c95572b04b" />
+
 
 Search tutorial
-![image](https://github.com/user-attachments/assets/a4c67579-d4a8-433f-b5f8-b7e8c03a6440)
+
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/39c4073b-0168-44fc-854c-bf4018f7f51c" />
+
 
 Part 1: Getting started
 
 •	Install Splunk Enterprise
 
-![image](https://github.com/user-attachments/assets/8cd7631b-f021-4e17-8c17-c745719cd89e)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6c5e213a-81e0-4ca3-801d-ba4a5b03928f" />
+
 
 Install the Splunk Enterprise DEB package
-![image](https://github.com/user-attachments/assets/9d25b1f5-610b-424c-a382-ada36c84def9)
+
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b9bd137a-4487-46af-915b-0e8ef64c08ec" />
+
 
 dpkg -i splunk_package_name.deb.
 
 >sudo dpkg -i
 
-![image](https://github.com/user-attachments/assets/eab015f9-658c-40a4-a0a9-f3d4a5fe9c2e)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/534dc89c-37ac-44df-ba20-a350d8e6c665" />
+
 
 Run below command in ubuntu
 
 >sudo dpkg -i splunk-9.4.1-e3bdab203ac8-linux-amd64.deb
 
-![image](https://github.com/user-attachments/assets/b927efe6-7bf2-47f1-bc5c-08362cd95812)
 
 
-![image](https://github.com/user-attachments/assets/a071e14d-4dda-415c-8bdb-ed610ce66b56)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/0ebee443-8e56-4d2f-9d0c-bcf040abb56a" />
+
+
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/903419b9-87f0-4566-807c-7d7972b54491" />
+
 
 To start the splunk please run below command
 
 >sudo /opt/splunk/bin/splunk enable boot-start
 
 
-![image](https://github.com/user-attachments/assets/322f83e9-90a3-4e9e-b4d4-09e08d19ff7f)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/ef029dcd-9e90-4dba-93ab-effa55ab4b50" />
+
 
 
 Click enter
 
-![image](https://github.com/user-attachments/assets/b932045c-f586-439d-9c13-f2afd9035922)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/57e0071b-fdcd-49dc-9983-70479b13afa5" />
 
 
-![image](https://github.com/user-attachments/assets/790d67c5-cc65-4a8a-a2ed-1f52f878cfea)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d210c351-827c-40ef-88e9-64559c7db081" />
 
 
-![image](https://github.com/user-attachments/assets/d65bda8a-2255-4231-9d9b-e2914798a31f)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f1a1a7ad-a2df-403e-a7b1-2c064cfeafd5" />
+
 
 
 Username:: 
 
-![image](https://github.com/user-attachments/assets/a1a5f381-3ded-4291-b779-561b2373e4e1)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/df96ad76-5d7c-4316-ba6b-3587c663f0cd" />
+
 
 
 Password:
 
-![image](https://github.com/user-attachments/assets/a95d259e-b0b6-4299-98e4-c690b057bbf5)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/3897140e-8ee4-4b92-921d-97d6da68d3c2" />
 
 
-![image](https://github.com/user-attachments/assets/2ffcc310-04f3-4e41-b09d-63087230510d)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d03498f2-4382-46e9-a666-66bc5a80022b" />
 
 
 For enabled boost start right for that we need to run below command
 
 >sudo ufw allow openSSH
 
-![image](https://github.com/user-attachments/assets/857857f0-9262-4d83-af93-53097331bfcd)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/51c3fcaf-5ffc-4ee0-8a76-93fb20bb32b9" />
 
 
-![image](https://github.com/user-attachments/assets/cc881e9c-94c1-454f-a8cc-4a375778c1e8)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/82b06b74-4b97-4fe2-8f3b-cbdaf4b8766c" />
+
 
 
 openSSH means open por 22
@@ -10284,7 +10318,8 @@ enabled port for splunk
 >sudo ufw allow 8000
 
 
-![image](https://github.com/user-attachments/assets/0112d03f-4f19-43cc-b27a-0b5d5248fa4c)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/79cabbdd-c11f-4d57-9795-2f1f38d86c3d" />
+
 
 
 Check the splunk status
@@ -10293,7 +10328,8 @@ Check the splunk status
 Inactive, so we need to enabled
 
 
-![image](https://github.com/user-attachments/assets/ab0950ca-af19-439f-bf79-401d208c175d)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/4b868c21-291a-4fbe-a797-19eb3f1da208" />
+
 
 
 Enabled splunk
@@ -10301,10 +10337,12 @@ Enabled splunk
 >sudo ufw enable
 
 
-![image](https://github.com/user-attachments/assets/4740cb2b-3ff0-4f2f-a1c9-af5e2bd8af6b)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/8a945675-9df3-4159-bf55-889f8316dd20" />
 
 
-![image](https://github.com/user-attachments/assets/f8ef0cda-91bb-499f-be3b-257c106657f2)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/3abdbc8a-9a7a-4dfb-9917-1d4af83818c7" />
+
 
 
 Now see openSSH port -22 allowed
@@ -10314,10 +10352,12 @@ Now we need to start splunk
 >sudo /opt/splunk/bin/splunk start
 
 
-![image](https://github.com/user-attachments/assets/d0593020-69ba-4212-9046-ff69e665593f)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f24ebb76-bd23-4d58-997b-2aa420ec613d" />
 
 
-![image](https://github.com/user-attachments/assets/37cf9f5e-85b2-442b-9e28-3dcac692605e)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/fef97218-2a96-4c76-b713-79ed5c9af24d" />
+
 
 
 Enter user/pwd
@@ -10326,69 +10366,46 @@ Srinu/Srinu@7358
 
 
 
-![image](https://github.com/user-attachments/assets/e0313ff9-9ddc-42e6-9e46-6152e40c0a51)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/296ed7ee-9391-4289-a2ee-6e588a489482" />
 
 
-![image](https://github.com/user-attachments/assets/12a6cc79-6efa-42eb-a0ea-70d1084d84da)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/4dac4965-34c7-4b42-95a6-d5a4ce4960fd" />
 
 
-Go Apps----- Find More Apps
 
-![image](https://github.com/user-attachments/assets/e0123b5d-c8eb-42d8-9eff-099b55046509)
-
-
-Splunk App for Jenkins  ----we need to install this app in splunk to integrate with Jenkins
-
-![image](https://github.com/user-attachments/assets/00be0b2e-ba7c-4660-aa40-4ae7e54b8e87)
-
-
-Click install
-Asking UN/PWD
-
-NOTE:: make sure you should provide the UN/PWD is splunk enterprise at the time of create the splunk account right
-
-![image](https://github.com/user-attachments/assets/91c02e5a-9b89-4cdd-8807-34084482a48e)
-
-Click agree & install
-
-![image](https://github.com/user-attachments/assets/fdaaaa1b-a921-40a1-a1d4-195e62da4cc1)
-
-
-![image](https://github.com/user-attachments/assets/ff25f0de-c433-42ae-b6dd-47de03da9a22)
-
-
-![image](https://github.com/user-attachments/assets/9664e7c6-53af-42f2-ada4-4c4d893d128e)
-
-
-Click splunk enterprise
-
-We can see splunk for Jenkins
-
-
-![image](https://github.com/user-attachments/assets/690e9a3f-b577-4f7d-86fc-3c5585d0cc22)
 
 
 Go to settings
 
-![image](https://github.com/user-attachments/assets/ebc01f35-ef98-40a6-ae30-ceb03d7a7e79)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/dba4a538-08ca-46af-8634-c0a542e9ad63" />
+
 
 
 Click data inputs
 
-![image](https://github.com/user-attachments/assets/70250ace-d56a-4429-af88-7773f67919c5)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f3ae561d-41ff-44c0-bb34-6343a0f6789f" />
 
 
-![image](https://github.com/user-attachments/assets/f97f0d52-0141-4b1c-bb27-08bf8ccc414b)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/303285dc-d37a-4466-b350-b4949c6b6d0b" />
+
 
 
 Click HTTP Event Collector
 
-![image](https://github.com/user-attachments/assets/9250ef52-d8d2-4591-b0ad-4df3b387053b)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6866a46f-94ac-4ade-af8e-15dd9f097011" />
+
 
 
 Click Global settings
 
-![image](https://github.com/user-attachments/assets/5be60128-7a12-4ea7-bb97-fe0915dd95c7)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/72fd9663-5a62-48eb-9012-0cda3929892d" />
+
 
 
 Uncheck
@@ -10396,7 +10413,8 @@ Uncheck
 Enable SSL
 
 
-![image](https://github.com/user-attachments/assets/97643fac-bde5-42fc-952b-9dda35662bfe)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/252fa574-9fcd-4c85-820d-9336c37b1fec" />
+
 
 
 For integrate with Jenkins we required New token
@@ -10404,36 +10422,47 @@ For integrate with Jenkins we required New token
 Click New Token
 
 
-![image](https://github.com/user-attachments/assets/8af2c367-bd84-4f37-af82-b6f2ef917912)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/5a40798e-5e07-4827-a10b-9ed06f0f22de" />
+
 
 
 Provided name
 
-![image](https://github.com/user-attachments/assets/e900004d-8aa3-426c-b44a-8f86fd472a13)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/9741dbd8-e67f-45a9-b1e5-63436381d341" />
+
 
 
 Next
 
-![image](https://github.com/user-attachments/assets/c16959b5-c0cf-4fa9-81b0-d13e5abf8223)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f67eb627-5063-4aec-a133-5968cef477be" />
+
 
 
 Click submit
 
-![image](https://github.com/user-attachments/assets/b045b901-267b-430f-86ba-3fa9e9d5b626)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/c520dbaa-eacd-48ff-a28f-cd317cc03ee8" />
+
 
 
 Click start searching
 
-![image](https://github.com/user-attachments/assets/3a51da53-920b-4057-8fde-9183fa0a71b7)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/136245ce-def5-413b-a688-a8efa89c62ad" />
 
 
 Go to setting - Data Inputs –
 
 Get the token value
 
-![image](https://github.com/user-attachments/assets/4b03dc1a-5c78-4796-9865-57c765b7be9f)
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b48e4853-ae25-48f4-b2b3-e04b66cba36d" />
+
 
 
 To integrate with Jenkins, we need to install Splunk plugin in Jenkins
 
-![image](https://github.com/user-attachments/assets/555c1b5c-ba85-4bae-b97e-5ba90118851b)
+
